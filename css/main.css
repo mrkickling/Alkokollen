@@ -42,7 +42,10 @@ body{
 	text-align: center;
 }
 .promille-col{
-	padding:10px 40px;
+	padding:0 40px;
+}
+.promille-col h2{
+	margin-top:0;
 }
 .statistics-col{
 	padding:40px;	
@@ -50,12 +53,47 @@ body{
 .drink-list{
 	margin-top:40px;
 }
-footer{
-	background-color: #345f33;
-	padding:20px 10px;
-	font: bold 25px sans-serif;
-	color:lightgrey;
-	height:80px;
+.add-drink-button{
+	width:100%;
+	background:#345f33;
+	border:none;
+	padding:10px;
+	border-radius:5px;
 }
 
+footer{
+    background-color: #292c2f;
+    padding:70px 10px;
+    font: bold 16px sans-serif;
+    margin-top:50px;
+}
+footer .footer-company-name{
+    margin-top:0;
+    padding-top:0;
+    margin-bottom:20px;
+    color:lightgrey;
+    font-weight:bold;
+}
+footer .footer-copyright{
+    color:  #8f9296;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+.social-media-list{
+    list-style:none;
+    color:  #8f9296;
+    margin-bottom:20px;
+    padding-left:0;
+    margin-left:0;
 
+}
+.social-media-list li{
+    display:inline;
+    margin-right:20px;
+}
+.social-media-list li a{
+    font-size:20px;
+    color:  #8f9296;
+
+}
