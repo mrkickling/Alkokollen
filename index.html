@@ -16,10 +16,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
+        <script src="js/plot.js"></script>
+        <script src="app.config.js"></script>
 
     </head>
 
-    <body>
+    <body ng-app='alkokollen'>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -81,7 +85,7 @@
           <div class="row">
             <div class="col-xs-2"></div>
             <div class="promille-col col-sm-4 col-xs-8">
-                <h2>Dina drycker</h2>
+                <h2>Dina förtärda drycker</h2>
                 <ul class="list-group">
                   <li class="list-group-item">Cras justo odio</li>
                   <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -104,8 +108,10 @@
         </div>
 
         <div class="container-fluid">
-          <div class="col-xs-12">
-            Statistik
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div id="statistics" style='height:300px; width:100%;'>
+
+            </div>
           </div>  
         </div>
 
