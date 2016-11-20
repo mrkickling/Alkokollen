@@ -1,13 +1,30 @@
 var app = angular.module('alkokollen', ['ngRoute']);
 
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "start.html",
+    	controller: welcomeCtrl
+    })
+    .when("/app", {
+        templateUrl : "app.html",
+    	controller: appCtrl
+    })
+    .otherwise({
+    	templateUrl: "start.html",
+    	controller: welcomeCtrl
+    })
+});
 
-function welcomeController($scope){
+function welcomeCtrl($scope, $location){
 	$scope.person = {};
 	$scope.addPerson = function(){
+		console.log('adding person');
+		$location.path('/app')
 	}
 }
 
-app.controller('appCtrl', function($scope){
+function appCtrl($scope){
 	$scope.drinks = []
 	$scope.user = {}
 
@@ -21,4 +38,4 @@ app.controller('appCtrl', function($scope){
 
 
 	}
-});
+}
