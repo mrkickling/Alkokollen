@@ -1,0 +1,65 @@
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Lägg till dryck</h4>
+              </div>
+              <div class="modal-body">
+                  <form name='addDrinkForm' id='addDrinkForm'>
+                      <label>Mängd:</label><input name='amount' class="form-control" type = 'number' placeholder='mängd (cl)' ng-model='amount' required><br>
+                      <label>Procentsats:</label><input max=100 name='percentage' class="form-control" type = 'number' placeholder='alkoholandel (procent)' step="0.01" ng-model='percentage' required><br>
+                      <label>Tid vid förtäring:</label><input step='60' name='time' class="form-control" type='time' ng-model = 'time' ng-focus="timesetting=true" required>                    
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="addDrink()">Lägg till dryck</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+
+        <div class="container-fluid">
+          <div class="row drink-list">
+              <div class="col-xs-8 col-xs-offset-2">
+
+              </div>
+          </div>  
+<!-- Button trigger modal -->
+
+        </div>
+
+        <div class="container-fluid text-center">
+          <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="promille-col col-sm-4 col-xs-8">
+                <h2>Dina förtärda drycker</h2>
+                <ul class="list-group">
+                  <li ng-repeat="drink in drinks"class="list-group-item">{{drink}}</li>
+                  <li ng-if="!drinks"class="list-group-item">Du har inte lagt till någon dryck</li>
+                </ul>
+                <button class='add-drink-button' data-toggle="modal" data-target="#myModal">Lägg till dryck</button>
+
+            </div>
+            <div class="col-sm-4 col-xs-8 col-xs-offset-2 col-sm-offset-0 statistics-col">
+                <h1 class="live-promille">
+                  3,2‰
+                </h1> 
+                Raglande gång. Känsloutbrott. Du kan bli aggressiv eller börja gråta. Och eventuellt kräkas. Du kommer vara som fullast om 2 timmar (3.2‰) och du kommer vara helt nykter om 13 timmar
+            </div>
+             <div class="col-sm-2"></div>
+
+          </div>  
+        </div>
+
+        <div class="container-fluid">
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div id="statistics" style='height:100px; width:100%;'>
+
+            </div>
+          </div>  
+        </div>

@@ -1,0 +1,35 @@
+        <div class="container-fluid text-center">
+          <div class="row">
+            <div class="col-xs-2 col-md-4"></div>
+            <div class="col-xs-8 col-md-4">
+            	<h2>Välkommen till Alkokollen!</h2>
+            	<p class='intro'>Alkokollen är en kalkylator för att räkna ut vilken alkoholpromille du har i realtid. För att kunna räkna ut din promille så måste vi först känna till din vikt, din längd, din ålder och ditt kön. Detta beror på att dessa är aspekter som påverkar hur snabbt du förbränner alkohol och hur stor andel vatten du har i kroppen. Var god fyll i formuläret nedan så kan vi börja!</p>
+
+            	<form name='idform' >
+
+
+                    <div class="radio-inline">
+                      <label><input name='sex' type = 'radio'  value='f' ng-model='sex' required>Kvinna </label>
+                    </div>
+                    <div class="radio-inline">
+                      <label><input name='sex' type = 'radio' value='m' ng-model='sex' required>Man</label>
+                    </div><br>
+
+
+                    <label>Vikt:</label><br>
+                    <input name='weight' class="form-control" type = 'number' placeholder='vikt (kg)' ng-model='weight' required><br>
+                    <label>Längd:</label><br>
+                    <input name='height' class="form-control" type = 'number' placeholder='längd (cm)' ng-model='height' required><br>
+                    <label>Ålder:</label><br>
+                    <input name='age' class="form-control" type = 'number' placeholder='ålder (år)' ng-model='age' required>
+                    <br>
+                    <input type='submit' class="form-control" value='Välkommen in' ng-click='idform.$valid && addPerson()'>
+                </form>
+
+            </div>
+
+             <div class="col-sm-2 col-md-4"></div>
+
+          </div>  
+        </div>
+

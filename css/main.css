@@ -39,20 +39,23 @@ body{
 }
 .live-promille{
 	font-size:80px;
+	margin-top:0px;
+	padding-top:0px;
 	text-align: center;
 }
+
 .promille-col{
-	padding:0 40px;
+	padding: 10px 40px;
 }
 .promille-col h2{
 	margin-top:0;
 	font-size:20px;
 }
 .statistics-col{
-	padding:40px;	
+	padding:10px 40px;	
 }
 .drink-list{
-	margin-top:40px;
+	margin-top: 10px 40px;
 }
 .add-drink-button{
 	width:100%;
@@ -97,4 +100,14 @@ footer .footer-copyright{
     font-size:20px;
     color:  #8f9296;
 
+}
+.intro{
+	margin-bottom:20px;
+}
+.list-group{
+	max-height:200px;
+	overflow:scroll;
+	overflow-x:hidden;
+
+	display:block;
 }
